@@ -1,0 +1,29 @@
+
+<div class="wrapper">
+    <div class="container" fxLayout="row">
+        <div class="leftWrapper" fxLayoutAlign="center center">
+            <div class="leftContainer">
+                <p>Компания Rootex приветствует вас. Введите ваши данные для входа в систему.</p>
+            </div>
+        </div>
+        <div class="rightWrapper" fxLayoutAlign="center center">
+            <div class="rightContainer" fxLayout="column">
+                <form [formGroup]="loginForm" (ngSubmit)="onLogin()" class="login-form" fxLayout="column" fxLayoutAlign="center center">
+                    <mat-form-field appearance="outline" class="input-text">
+                        <input matInput placeholder="Email" formControlName="email">
+                        <button mat-button mat-icon-button matPrefix color="primary">
+                            <mat-icon>email</mat-icon>
+                        </button>
+                    </mat-form-field>
+                    <mat-form-field appearance="outline" class="input-text">
+                        <input matInput placeholder="Password" formControlName="password">
+                        <button mat-button mat-icon-button matPrefix color="primary">
+                            <mat-icon>key</mat-icon>
+                        </button>
+                    </mat-form-field>
+                    <button mat-button mat-raised-button color="primary" class="login-button" type="submit">Log In</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

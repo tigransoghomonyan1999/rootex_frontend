@@ -1,0 +1,23 @@
+.aboutWrapper {
+    &::before {
+      content: "";
+      background-image: url('https://wallpaperaccess.com/full/732220.jpg');
+      background-size: cover;
+      position: absolute;
+      top: 50px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+      opacity: 0.15;
+    }
+    width: 100%;
+    .aboutContainer {
+        padding-top: 35px;
+        width: 70%;
+        opacity: 1;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 29px;
+        color: #3F51B5;
+    }
+}

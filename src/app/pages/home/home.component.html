@@ -1,0 +1,12 @@
+<div class="homeWrapper" fxLayout="row" fxLayoutAlign="center center">
+    <div class="homeContainer" fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="15px">
+        <p class="uploadTitle">Загрузите .csv файл для начинания процесса </p>
+        <button mat-button mat-raised-button color="primary" (click)="fileInput.click()">Загрузить ․csv файл</button>
+        <input hidden (change)="onFileChange()" #fileInput type="file" id="file" accept=".csv"/>
+        <div fxLayout="row" fxLayoutGap="20px" *ngIf="showSendButton">
+            <p>{{fileName}}</p>
+            <mat-icon aria-hidden="false" aria-label="Example home icon">backup</mat-icon>
+        </div>
+        <button *ngIf="showSendButton" mat-button mat-raised-button color="warn" (click)="sedCsv()">Отправить</button>
+    </div>
+</div>
