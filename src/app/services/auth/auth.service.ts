@@ -12,7 +12,7 @@ export class AuthService {
   login(email: String, password: String) {
     let loginData = { email, password };
     this.http
-      .post('https://thawing-thicket-32621.herokuapp.com/api/v1/login', loginData)
+      .post('http://localhost:3001/api/v1/login', loginData)
       .subscribe((response: any) => {
         console.log(response);
         if (response.token) {
@@ -28,7 +28,7 @@ export class AuthService {
   async verify() {
     const token = localStorage.getItem('token');
     this.http
-      .post('https://thawing-thicket-32621.herokuapp.com/api/v1/login/verify', { token })
+      .post('http://localhost:3001/api/v1/login/verify', { token })
       .subscribe((response: any) => {
         if (!response.isAuthorised) {
           this.loggedIn = false;

@@ -1,15 +1,17 @@
+import { ResponseCsvService } from './services/response-csv/response-csv.service';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import {ReactiveFormsModule} from "@angular/forms"
+import { ReactiveFormsModule } from '@angular/forms';
 
-import {MatButtonModule} from "@angular/material/button";
-import {MatIconModule} from "@angular/material/icon";
-import {MatInputModule} from '@angular/material/input';
-import {MatFormFieldModule} from '@angular/material/form-field';
-import {HttpClientModule} from "@angular/common/http"
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { HttpClientModule } from '@angular/common/http';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 
-import {FlexLayoutModule} from "@angular/flex-layout"
+import { FlexLayoutModule } from '@angular/flex-layout';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -21,6 +23,7 @@ import { AuthService } from './services/auth/auth.service';
 import { AuthGuard } from './services/auth/auth-guard.service';
 import { LoginComponent } from './pages/login/login.component';
 import { MainComponent } from './pages/main/main.component';
+import { ResponseCsvComponent } from './pages/response-csv/response-csv.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +33,8 @@ import { MainComponent } from './pages/main/main.component';
     HeaderComponent,
     FooterComponent,
     LoginComponent,
-    MainComponent
+    MainComponent,
+    ResponseCsvComponent,
   ],
   imports: [
     MatFormFieldModule,
@@ -43,8 +47,9 @@ import { MainComponent } from './pages/main/main.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     FlexLayoutModule,
+    MatProgressSpinnerModule,
   ],
-  providers: [AuthService, AuthGuard],
-  bootstrap: [AppComponent]
+  providers: [AuthService, AuthGuard, ResponseCsvService],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

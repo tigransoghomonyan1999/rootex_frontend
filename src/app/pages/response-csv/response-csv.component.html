@@ -1,0 +1,17 @@
+<div class="wrapper" fxLayoutAlign="center center">
+  <div
+    class="container"
+    fxLayout="column"
+    fxLayoutAlign="start center"
+    fxLayoutGap="20px"
+  >
+    <div class="item" *ngFor="let item of csvUrls" fxLayout="row">
+      <p>{{ item.filename }}</p>
+      <a [href]="item.url"
+        ><mat-icon aria-hidden="false" aria-label="Example home icon"
+          >download</mat-icon
+        ></a
+      >
+    </div>
+  </div>
+</div>
