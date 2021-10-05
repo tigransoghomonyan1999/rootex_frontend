@@ -20,6 +20,7 @@ import { FooterComponent } from './sharedComponents/footer/footer.component';
 import { AuthService } from './services/auth/auth.service';
 import { AuthGuard } from './services/auth/auth-guard.service';
 import { LoginComponent } from './pages/login/login.component';
+import { MainComponent } from './pages/main/main.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { LoginComponent } from './pages/login/login.component';
     AboutComponent,
     HeaderComponent,
     FooterComponent,
-    LoginComponent
+    LoginComponent,
+    MainComponent
   ],
   imports: [
     MatFormFieldModule,

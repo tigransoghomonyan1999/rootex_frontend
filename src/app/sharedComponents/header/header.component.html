@@ -1,10 +1,18 @@
 <div class="headerContainer" fxLayout="row" fxLayoutAlign="center center">
-    <button mat-button color="primary" (click)="goToHome()">
-         Главная
-        <mat-icon aria-hidden="false" aria-label="Example home icon">home</mat-icon>
-    </button>
-    <button mat-button color="primary" (click)="goToAbout()">
-        О нас
-        <mat-icon aria-hidden="false" aria-label="Example home icon">library_books</mat-icon>
-    </button>
+  <button mat-button color="primary" (click)="goToHome()">
+    Главная
+    <mat-icon aria-hidden="false" aria-label="Example home icon">home</mat-icon>
+  </button>
+  <button mat-button color="primary" (click)="goToAbout()">
+    О нас
+    <mat-icon aria-hidden="false" aria-label="Example home icon"
+      >library_books</mat-icon
+    >
+  </button>
+  <button mat-button color="primary" (click)="logout()" class="logout-button">
+    Выход
+    <mat-icon aria-hidden="false" aria-label="Example home icon"
+      >logout</mat-icon
+    >
+  </button>
 </div>
