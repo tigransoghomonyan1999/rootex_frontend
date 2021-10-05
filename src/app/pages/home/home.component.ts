@@ -23,7 +23,7 @@ export class HomeComponent implements OnInit {
   sedCsv() {
     let formData = new FormData();
     formData.append("csvFile", this.mainCsv);
-    this.http.post("http://localhost:3001/api/v1/csv-process", formData).subscribe(response => {
+    this.http.post("https://thawing-thicket-32621.herokuapp.com/api/v1/csv-process", formData).subscribe(response => {
       console.log(response)
     })
   }
