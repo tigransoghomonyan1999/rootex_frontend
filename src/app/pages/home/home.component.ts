@@ -30,7 +30,7 @@ export class HomeComponent implements OnInit {
     formData.append('csvFile', this.mainCsv);
     this.isLoadingResponse = true;
     this.http
-      .post('http://localhost:3001/api/v1/csv-process', formData)
+      .post('https://thawing-thicket-32621.herokuapp.com/api/v1/csv-process', formData)
       .subscribe(async (response) => {
         this._rcs.setCsvUrls(response);
         await new Promise((res, rej) => {
